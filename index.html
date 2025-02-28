@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container {
+        max-width: 600px;
+        margin: 50px auto;
+    }
+
+    .tabs {
+        display: flex;
+        justify-content: space-around;
+        position: relative;
+    }
+
+    .tab-content {
+        position: absolute;
+        left: 0;
+        top: 40px;
+        display: none;
+        border: 1px solid brown;
+    }
+
+    input[type="radio"] {
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+
+    input[type="radio"]:checked+label+.tab-content {
+        display: block;
+    }
+
+    input[type="radio"]:checked+label {
+
+        background-color: aquamarine;
+        color: #f7f7f7;
+    }
+
+    label {
+        padding: 7px 15px;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="tabs">
+            <div class="tab">
+                <input type="radio" name="tabs" id="tab1" checked>
+                <label for="tab1">tab 1</label>
+                <div class="tab-content">tab 1 content </div>
+            </div>
+            <div class="tab">
+                <input type="radio" name="tabs" id="tab2">
+                <label for="tab2">tab 2</label>
+                <div class="tab-content">tab 2 content </div>
+            </div>
+            <div class="tab">
+                <input type="radio" name="tabs" id="tab3">
+                <label for="tab3">tab 3</label>
+                <div class="tab-content">tab 3 content </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
